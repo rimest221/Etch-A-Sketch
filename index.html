@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lol</title>
-</head>
-<body>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 352px;
+      }
+
+      .box {
+        height: 16px;
+        width: 16px;
+        border: red solid;
+      }
+
+      .boc {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <button class="btn">reset</button>
+    <style>
+      .hover{
+        background: #000;
+      }
+    </style>
+
+  </body>
+  <script>
+let input=prompt("inserisci grandezza area disegno");
+    const container = document.querySelector(".container");
+    box=document.querySelector(".box")
+    const btn = document.querySelector(".btn");
+    var contval=input*22;
+    for(let i=0;i<input*input;i++){
+        const box= document.createElement("div");
+        box.classList.add("box")
+        container.appendChild(box);
+        const a=document.querySelectorAll(".box");
+        
+        
+    }
+
+    let boxes= document.querySelectorAll(".box");
+
+    boxes.forEach(element => {
+      element.addEventListener("mouseover",()=>{
+        element.classList.add("hover");
+      })
+    });
+
+      btn.addEventListener("click",()=>{
+      for(i=0;i<boxes.length;i++){
+        boxes[i].classList.remove("hover");
+      }
+    })
+console.log(contval);
+    container.style.width=`${contval}px`;
+    container.style.height=`${contval}px`;
     
-</body>
+    
+    
+    
+  
+
+
+
+
+    
+
+
+
+  </script>
 </html>
